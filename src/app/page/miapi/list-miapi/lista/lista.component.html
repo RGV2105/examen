@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <!-- Título de la lista de Loki -->
+    <h2 class="text-center mb-4">Lista de Lokis</h2>
+  
+    <!-- Tabla que muestra los Lokis -->
+    <table class="table table-striped mt-2" *ngIf="lokiData?.loki">
+      <thead class="text-center bg-dark text-white">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Alias</th>
+          <th scope="col">Especie</th>
+          <th scope="col">Género</th>
+          <th scope="col">Origen</th>
+          <th scope="col">Poderes</th>
+          <th scope="col">Afiliaciones</th>
+          <th scope="col">Apariciones</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="bg-light">
+        <!-- Iterar sobre la lista de Lokis y mostrar sus datos -->
+        <tr *ngFor="let loki of lokiData?.loki; let i = index" class="text-center">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ loki.nombre }}</td>
+          <td>{{ loki.alias.join(', ') }}</td>
+          <td>{{ loki.especie }}</td>
+          <td>{{ loki.genero }}</td>
+          <td>{{ loki.origen }}</td>
+          <td>{{ loki.poderes.join(', ') }}</td>
+          <td>{{ loki.afiliaciones.join(', ') }}</td>
+          <td>{{ loki.apariciones.join(', ') }}</td>
+          <td>{{ loki.descripcion }}</td>
+          <td class="row">
+            <!-- Botones de acción -->
+            <button class="btn btn-outline-warning col me-1" (click)="editarLoki(loki)">Editar</button>
+            <button class="btn btn-outline-danger col me-1" (click)="eliminarLoki(loki._id.$oid)">Eliminar</button>
+            <button class="btn btn-outline-info col me-1" (click)="verMas(loki)">Ver Más</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Modal de creación/edición -->
+    <app-modal-creacion></app-modal-creacion>
+  </div>

@@ -1,0 +1,28 @@
+.loki-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .loki-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .loki-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+  }

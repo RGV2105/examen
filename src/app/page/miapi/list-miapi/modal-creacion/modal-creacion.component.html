@@ -1,0 +1,68 @@
+<div class="modal fade" #modalElement tabindex="-1" aria-labelledby="lokiModalLabel" aria-hidden="true" *ngIf="ejemplo">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <!-- Header del Modal -->
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Loki: {{ ejemplo.nombre }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Cuerpo del Modal -->
+      <div class="modal-body">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" id="nombre" class="form-control" value="{{ ejemplo.nombre }}" #nombre />
+
+        <label for="alias" class="form-label">Alias</label>
+        <input type="text" id="alias" class="form-control" value="{{ ejemplo.alias.join(', ') }}" #alias />
+
+        <label for="especie" class="form-label">Especie</label>
+        <input type="text" id="especie" class="form-control" value="{{ ejemplo.especie }}" #especie />
+
+        <label for="genero" class="form-label">Género</label>
+        <input type="text" id="genero" class="form-control" value="{{ ejemplo.genero }}" #genero />
+
+        <label for="origen" class="form-label">Origen</label>
+        <input type="text" id="origen" class="form-control" value="{{ ejemplo.origen }}" #origen />
+
+        <label for="poderes" class="form-label">Poderes</label>
+        <input type="text" id="poderes" class="form-control" value="{{ ejemplo.poderes.join(', ') }}" #poderes />
+
+        <label for="afiliaciones" class="form-label">Afiliaciones</label>
+        <input type="text" id="afiliaciones" class="form-control" value="{{ ejemplo.afiliaciones.join(', ') }}" #afiliaciones />
+
+        <label for="apariciones" class="form-label">Apariciones</label>
+        <input type="text" id="apariciones" class="form-control" value="{{ ejemplo.apariciones.join(', ') }}" #apariciones />
+
+        <label for="descripcion" class="form-label">Descripción</label>
+        <textarea id="descripcion" class="form-control" rows="3" #descripcion>{{ ejemplo.descripcion }}</textarea>
+
+        <label for="imagen" class="form-label">URL de la Imagen</label>
+        <input type="text" id="imagen" class="form-control" value="{{ ejemplo.imagen }}" #imagen />
+      </div>
+
+      <!-- Footer del Modal -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="editarLoki(
+            nombre.value, 
+            alias.value, 
+            especie.value, 
+            genero.value, 
+            origen.value, 
+            poderes.value, 
+            afiliaciones.value, 
+            apariciones.value, 
+            descripcion.value, 
+            imagen.value, 
+            ejemplo._id.$oid
+          )"
+        >
+          Guardar Cambios
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

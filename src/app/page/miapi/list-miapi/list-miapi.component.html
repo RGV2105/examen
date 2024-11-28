@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <!-- Título de la lista -->
+    <h2 class="text-center mb-4">Lista de Lokis desde la API</h2>
+  
+    <!-- Botón para abrir el modal -->
+    <div class="d-flex justify-content-center mb-4">
+      <button class="btn btn-primary" (click)="openmodal()">Agregar Loki</button>
+    </div>
+  
+    <!-- Componente Lista que muestra la tabla de Lokis -->
+    <app-lista [lokiData]="Loki"></app-lista>
+  
+    <!-- Modal para editar Loki -->
+    <app-modal-edicion></app-modal-edicion>
+  </div>
