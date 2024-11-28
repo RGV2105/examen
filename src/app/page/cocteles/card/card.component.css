@@ -1,58 +1,108 @@
-/* Estilos para la lista de cartas */
-.flixed-card {
-    background-color: #f5f5f5; /* Color de fondo gris claro */
-    border: 2px solid #ff5722; /* Borde naranja */
-    border-radius: 12px; /* Mantener bordes redondeados */
+/* Card Container Styles */
+.row {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  /* General Card Styles */
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
-    padding: 16px; /* Espacio interno */
-}
-
-.flixed-card:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.flixed-body {
-    background-color: #ffffff; /* Fondo blanco para el cuerpo de la tarjeta */
-    border-top: 2px solid #ff5722; /* Borde superior */
-    padding: 16px;
-    text-align: center;
-}
-
-/* Estilo para la imagen dentro de la tarjeta */
-.flixed-img {
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Image Styles */
+  .card-img-top {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Bordes redondeados para la imagen */
+    border-bottom: 2px solid #007bff;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card-img-top.flixed-img {
     object-fit: cover;
-    margin-bottom: 12px; /* Espacio entre la imagen y el contenido */
-}
-
-/* Estilo para el botón */
-.btn-primary {
-    background-color: #ff5722; /* Fondo del botón naranja */
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 8px; /* Bordes redondeados */
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #e64a19; /* Color más oscuro al pasar el ratón */
-}
-
-/* Estilo para el título de la tarjeta */
-.card-title {
-    color: #333333; /* Color del texto del título */
+    max-height: 200px;
+  }
+  
+  .card-img-top:hover {
+    opacity: 0.9;
+  }
+  
+  /* Card Body Styles */
+  .card-body {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8f9fa; /* Light gray for better readability */
+  }
+  
+  .card-title {
     font-size: 1.2rem;
-    margin-bottom: 8px;
-}
-
-/* Estilo para el texto de la tarjeta */
-.card-text {
-    color: #666666; /* Color gris del texto */
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
+    font-weight: bold;
+    color: #343a40; /* Dark gray for text */
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #6c757d; /* Muted text for less emphasis */
+    margin-bottom: 5px;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Loader Styles */
+  svg {
+    animation: rotate 1.5s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Alert Styles */
+  .alert {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .col-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .card {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  }
+  

@@ -1,7 +1,57 @@
+/* General Styles for Pagination */
+.pagination {
+  padding: 10px 0;
+  margin: 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Page Items */
+.page-item {
+  margin: 0 5px;
+}
+
 .page-link {
-    color: rgb(8, 8, 8);
+  color: #007bff; /* Blue for normal links */
+  background-color: #fff; /* White background for clarity */
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  text-transform: uppercase; /* Ensures letters are capitalized */
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+  background-color: #e9ecef; /* Light gray background on hover */
+  border-color: #007bff; /* Blue border on hover */
+}
+
+/* Active Page Styles */
+.page-link.active {
+  color: #fff;
+  background-color: #007bff; /* Solid blue for active */
+  border-color: #0056b3;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Add shadow for emphasis */
+}
+
+/* Aligning Pagination */
+.pagination.justify-content-center {
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-item {
+    margin: 2px;
   }
+
   .page-link {
-    color: orange; /* Cambia el color del texto a naranja */
-    border-color: orange; /* Cambia el color del borde a naranja */
+    padding: 6px 10px;
+    font-size: 0.9rem;
   }
+}

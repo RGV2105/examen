@@ -14,7 +14,7 @@ export const routes: Routes = [
     { path: 'pokemon', component: PokemonComponent },
     { path: 'DBZ', component: DbzComponent },
     { path: 'cocteles', component: CoctelesComponent },
-    { path: 'Miapi', loadChildren: () => import('./page/miapi/miapi-routing.module').then(m => m.MiapiRoutingModule), canActivate:[AuthGuard]},
+    { path: 'miapi', loadChildren: () => import('./page/miapi/miapi-routing.module').then(m => m.MiapiRoutingModule), canActivate:[AuthGuard]},
 
     { path: '**', component: ErrorComponent }
 

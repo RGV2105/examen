@@ -1,37 +1,52 @@
-.error-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #f7f7f7;
-    color: #333;
+/* Estilo general para la página */
+body {
     font-family: 'Arial', sans-serif;
-    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #333;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Contenedor del error */
+.error-container {
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Título principal */
 .error-container h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: #d9534f; /* Rojo suave */
-}
-
-.error-container p {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
+    color: #dc3545; /* Rojo intenso */
     margin-bottom: 20px;
 }
 
-.error-container .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0275d8; /* Azul profesional */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Párrafos descriptivos */
+.error-container p {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
-.error-container .btn:hover {
-    background-color: #025aa5; /* Azul más oscuro en hover */
+/* Estilo para el botón */
+.error-container a.btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+}
+
+/* Hover para el botón */
+.error-container a.btn:hover {
+    background: #0056b3;
 }

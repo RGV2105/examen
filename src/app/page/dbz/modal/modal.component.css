@@ -1,0 +1,87 @@
+/* Estilo general del modal */
+.modal-content {
+    background-color: #1e1e2d; /* Fondo oscuro estilo DBZ */
+    border: 3px solid #ff7b00; /* Borde naranja brillante */
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff7b00;
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo del header */
+.modal-header {
+    background-color: #ff7b00; /* Naranja brillante */
+    border-bottom: 3px solid #f1c40f; /* Línea amarilla */
+    color: #000000; /* Texto negro */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.modal-title {
+    font-family: 'Saiyan Sans', sans-serif; /* Fuente personalizada estilo DBZ */
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px #f1c40f, 0 0 10px #ff7b00;
+}
+
+/* Botón de cierre */
+.btn-close {
+    background-color: #f1c40f; /* Amarillo estilo esfera */
+    border-radius: 50%;
+    box-shadow: 0 0 5px #f1c40f;
+    opacity: 1;
+}
+.btn-close:hover {
+    background-color: #ff7b00;
+    box-shadow: 0 0 10px #ff7b00;
+}
+
+/* Estilo del cuerpo */
+.modal-body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilo de las imágenes */
+.img-custom-size {
+    border: 3px solid #ff7b00; /* Borde naranja */
+    border-radius: 8px;
+    box-shadow: 0 0 10px #f1c40f;
+    max-height: 250px; /* Ajusta tamaño máximo */
+}
+
+/* Estilo de las filas */
+.row {
+    margin-bottom: 1rem;
+}
+
+/* Estilo de textos secundarios */
+h6 {
+    font-size: 1rem;
+    color: #f1c40f; /* Amarillo vibrante */
+    text-shadow: 0 0 3px #ff7b00;
+}
+
+h6 span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p {
+    color: #dcdcdc; /* Gris claro */
+}
+
+/* Línea divisoria */
+hr {
+    border: 1px solid #f1c40f; /* Amarillo vibrante */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .img-custom-size {
+        max-height: 200px;
+    }
+    h6 {
+        font-size: 0.9rem;
+    }
+}
